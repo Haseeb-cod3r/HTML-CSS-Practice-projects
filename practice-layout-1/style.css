@@ -1,0 +1,262 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #fafafa;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px 30px;
+}
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.card1 {
+  background-color: #733fc8;
+  color: #ffff;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  box-shadow: 50px 50px 60px 0px rgb(160, 160, 160);
+}
+.card1 h2 {
+  margin-bottom: 20px;
+  position: relative;
+}
+.card-top-1 {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card-top-1 .text-1 {
+  align-self: center;
+  position: relative;
+  z-index: 2;
+}
+.card-top-1 .text-1 span {
+  font-weight: 900;
+}
+
+.card2 {
+  background-color: #49556b;
+  color: #ffff;
+  box-shadow: 50px 50px 60px 20px rgb(160, 160, 160);
+}
+.card2 h2 {
+  margin-bottom: 20px;
+}
+.card-top-2 {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card-top-2 .text-2 {
+  align-self: center;
+}
+.card-top-2 .text-2 span {
+  font-weight: 900;
+}
+
+.card3 {
+  background-color: #ffff;
+  color: #49556b;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  box-shadow: 50px 50px 60px 20px rgb(160, 160, 160);
+}
+.card3 h2 {
+  margin-bottom: 20px;
+}
+.card-top-3 {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card-top-3 .text-3 {
+  align-self: center;
+}
+.card-top-3 .text-3 span {
+  font-weight: 900;
+}
+
+.card4 {
+  background-color: #191f2d;
+  color: #ffff;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  box-shadow: 50px 50px 60px 20px rgb(160, 160, 160);
+}
+.card4 h2 {
+  margin-bottom: 20px;
+}
+.card-top-4 {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card-top-4 .text-4 {
+  align-self: center;
+}
+.card-top-4 .text-4 span {
+  font-weight: 900;
+}
+
+.card5 {
+  background-color: #ffff;
+  color: #49556b;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  box-shadow: 50px 50px 60px 20px rgb(160, 160, 160);
+}
+.card5 h2 {
+  margin-bottom: 20px;
+}
+.card-top-5 {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card-top-5 .text-5 {
+  align-self: center;
+}
+.card-top-5 .text-5 span {
+  font-weight: 900;
+}
+
+.img {
+  border-radius: 50%;
+}
+.special-img{
+    position: absolute;
+    top: 0px;
+    right: 70px;
+    height: 123px;
+}
+
+@media (max-width: 1000px) {
+    .container{
+        width: 100%;
+        display: block;
+    }
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .card1 {
+    background-color: #733fc8;
+    color: #ffff;
+  }
+  .card1 h2 {
+    margin-bottom: 40px;
+  }
+  .card-top-1 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-top-1 .text-1 {
+    align-self: center;
+  }
+  .card-top-1 .text-1 span {
+    font-weight: 900;
+  }
+
+  .card2 {
+    background-color: #49556b;
+    color: #ffff;
+  }
+  .card2 h2 {
+    margin-bottom: 40px;
+  }
+  .card-top-2 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-top-2 .text-2 {
+    align-self: center;
+  }
+  .card-top-2 .text-2 span {
+    font-weight: 900;
+  }
+
+  .card3 {
+    background-color: #ffff;
+    color: #49556b;
+  }
+  .card3 h2 {
+    margin-bottom: 40px;
+  }
+  .card-top-3 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-top-3 .text-3 {
+    align-self: center;
+  }
+  .card-top-3 .text-3 span {
+    font-weight: 900;
+  }
+
+  .card4 {
+    background-color: #191f2d;
+    color: #ffff;
+  }
+  .card4 h2 {
+    margin-bottom: 40px;
+  }
+  .card-top-4 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-top-4 .text-4 {
+    align-self: center;
+  }
+  .card-top-4 .text-4 span {
+    font-weight: 900;
+  }
+
+  .card5 {
+    background-color: #ffff;
+    color: #49556b;
+  }
+  .card5 h2 {
+    margin-bottom: 40px;
+  }
+  .card-top-5 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-top-5 .text-5 {
+    align-self: center;
+  }
+  .card-top-5 .text-5 span {
+    font-weight: 900;
+  }
+
+  .img {
+    border-radius: 50%;
+  }
+  .special-img{
+    display: none;
+  }
+}
