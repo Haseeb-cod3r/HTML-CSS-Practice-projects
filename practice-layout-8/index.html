@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet"
+    href="https://fonts.google.com/specimen/Plus+Jakarta+Sans>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right">
+        <div class="sec1">
+          <span class="mainHeading">Mortgage Calculator</span>
+          <span class="clear">Clear All</span>
+        </div>
+        <div class="sec2">
+          <label for="mortage">Mortgage Amount</label><br />
+          <input id="mortage" type="text" placeholder="€" />
+        </div>
+        <div class="sec3">
+          <div class="term">
+            <label for="term">Mortgage Term</label><br />
+            <input id="term" type="text" placeholder="Years" />
+          </div>
+          <div class="bonusInput">
+            <label for="bonus">Bonus</label><br />
+            <input id="bonus" type="text" placeholder="%" />
+          </div>
+        </div>
+        <div class="sec4">
+          Mortgage Type <br />
+          <div class="repayment">
+            <input type="radio" name="radio" checked />
+            <span class="repaymentSpan"> Repayment</span>
+          </div>
+          <div class="bonus">
+            <input type="radio" name="radio" />
+            <span class="bonusSpan"> Bonus Only</span>
+          </div>
+        </div>
+        <div class="sec5">
+          <i class="fa-solid fa-calculator"></i>
+          <span class="calculate">Calculate Repayments</span>
+        </div>
+      </div>
+      <div class="left">
+        <img src="./assets/images/illustration-empty.svg" alt="" />
+        <h1>Results shown here</h1>
+        <span class="text"
+          >Complete the form and click “calculate repayments” to <br />
+          see what your monthly repayments would be.</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
