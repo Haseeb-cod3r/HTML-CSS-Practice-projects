@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: "Rubik";
 }
-html , body {
+html,
+body {
   background-color: #ffff;
   font-size: 16px;
   width: 100vw;
@@ -36,18 +37,6 @@ html , body {
   align-items: center;
   gap: 20px;
 }
-@media(max-width:768px ){
-  .container{
-    flex-direction: column;
-  }
-  .mob{
-    margin-bottom: 70px;
-    
-  }
-  .text{
-    width: 360px;
-  }
-}
 .text {
   width: 400px;
   color: hsl(270, 7%, 64%);
@@ -64,6 +53,7 @@ html , body {
   padding: 15px 0px;
   width: 360px;
   /* height: 75%; */
+  min-height: 700px;
   background-color: white;
   box-shadow: 10px 10px 60px 5px rgb(192, 192, 192);
   flex-grow: 0;
@@ -73,7 +63,6 @@ html , body {
   align-items: center;
 }
 .mobContainer {
-  
   border-radius: 30px;
   width: 92%;
   height: 96%;
@@ -231,7 +220,7 @@ html , body {
 }
 
 /* .sec5 {
-} */
+    } */
 .type {
   margin: 10px;
   margin-top: 15px;
@@ -252,4 +241,17 @@ html , body {
   align-items: center;
   justify-content: center;
   font-size: 1vw;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .mob {
+    margin-bottom: 70px;
+    padding: 0px 0px;
+  }
+  .text {
+    width: 360px;
+  }
 }
