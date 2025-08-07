@@ -1,0 +1,166 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+}
+html,
+body {
+  height: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-color: #ecf2ff;
+  display: flex;
+  align-items: center;
+}
+.container {
+  margin-inline: auto;
+  width: 600px;
+  min-height: 450px;
+  display: flex;
+  background-color: #ffff;
+  border-radius: 30px;
+}
+.right,
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right {
+  background-image: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  border-radius: 30px;
+  color: #ffff;
+  padding: 30px;
+  text-align: center;
+}
+.right .firstHeading {
+  color: #ffffffa8;
+  font-size: 1.4rem;
+}
+.circle {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(
+    180deg,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
+  transition: all ease 0.33s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.circle:hover {
+  scale: 1.3;
+}
+.circle h1 {
+  font-size: 4rem;
+}
+.right .secondHeading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.right span {
+  color: #ffffffa8;
+}
+.left {
+  padding: 30px;
+  display: block;
+}
+.left h1 {
+  margin-bottom: 20px;
+  color: hsl(224, 30%, 27%);
+}
+.card {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover .score {
+  scale: 1.4;
+}
+
+.card .text {
+  font-weight: 700;
+}
+.card .score {
+  margin-left: auto;
+  font-weight: 700;
+  transition: all ease 0.33s;
+}
+.score span {
+  color: #0f0f0f71;
+}
+.button {
+  margin-top: 70px;
+  width: 100%;
+  background-color: hsl(224, 30%, 27%);
+  color: #ffff;
+  border-radius: 30px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.33s;
+}
+.button:hover {
+  background-color: hsl(252, 100%, 67%);
+}
+.card1 .text {
+  color: hsl(0, 100%, 67%);
+}
+.card2 .text {
+  color: hsl(39, 100%, 56%);
+}
+.card3 .text {
+  color: hsl(166, 100%, 37%);
+}
+.card4 .text {
+  color: hsl(234, 85%, 45%);
+}
+.card1 {
+  background-color: hsla(0, 100%, 67%, 0.164);
+}
+.card2 {
+  background-color: hsla(39, 100%, 56%, 0.123);
+}
+.card3 {
+  background-color: hsla(166, 100%, 37%, 0.123);
+}
+.card4 {
+  background-color: hsla(234, 85%, 45%, 0.158);
+}
+@media (max-width: 485px) {
+  body {
+    /* display: block; */
+    align-items: flex-start;
+  }
+  .container {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+  .right {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
