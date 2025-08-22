@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 nav {
   padding: 30px 10%;
@@ -12,6 +13,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 70px;
+  box-shadow: 0px 1px 4px 0px rgb(158, 155, 155);
+  position: sticky;
+  top: 0px;
+  background-color: #ffff;
+  z-index: 5;
 }
 nav .links ul {
   display: flex;
@@ -39,7 +45,9 @@ nav .links ul li:hover {
   border-radius: 5px;
   color: white;
 }
-
+button {
+  cursor: pointer;
+}
 nav .links ul .active {
   background-color: hsl(0, 94%, 66%);
   padding: 5px 20px;
@@ -57,6 +65,10 @@ nav .links ul .active {
   gap: 100px;
   margin-bottom: 70px;
 }
+.right,
+.left {
+  width: 100%;
+}
 .right {
   display: flex;
   flex-direction: column;
@@ -66,6 +78,9 @@ nav .links ul .active {
   color: hsl(229, 31%, 21%);
   font-size: clamp(1rem, 3vw, 2.5rem);
   font-weight: 500;
+}
+.right h1 span {
+  color: hsl(231, 69%, 60%);
 }
 .right P {
   color: hsl(229, 14%, 46%);
@@ -103,16 +118,18 @@ nav .links ul .active {
 }
 .left img {
   position: relative;
+  width: 100%;
 }
 .left .bg {
   position: absolute;
   height: 350px;
-  width: 40vw;
+  width: 130%;
   background-color: hsl(231, 69%, 60%);
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
   bottom: -15px;
-  right: -100px;
+  right: -450px;
+  pointer-events: none;
 }
 .features {
   padding: 0px 10%;
@@ -135,8 +152,10 @@ nav .links ul .active {
 .features .options {
   padding: 0px 0px 10px 0px;
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  gap: 100px;
+  column-gap: 100px;
+  /* row-gap: 30px; */
   box-shadow: 0px 1px 2px 0px rgb(156, 156, 156);
   cursor: pointer;
 }
@@ -179,6 +198,7 @@ nav .links ul .active {
   gap: 100px;
   margin-bottom: 150px;
 }
+
 .bookMark .left {
   display: flex;
   flex-direction: column;
@@ -212,14 +232,205 @@ nav .links ul .active {
 }
 .bookMark .right img {
   position: relative;
+  width: 100%;
 }
 .bookMark .right .bg2 {
   position: absolute;
   height: 350px;
-  width: 40vw;
+  width: 100%;
   background-color: hsl(231, 69%, 60%);
   border-bottom-right-radius: 50%;
   border-top-right-radius: 50%;
   bottom: -80px;
-  left: -125px;
+  left: -325px;
+}
+.extensions {
+  padding: 0px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.top {
+  text-align: center;
+}
+.top h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+}
+.top p {
+  color: hsl(229, 14%, 46%);
+}
+.extensions .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  height: 400px;
+}
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 1px 1px 5px 0px rgb(189, 185, 185);
+  border-radius: 20px;
+  max-width: 300px;
+  transition: all ease 0.33s;
+}
+.card:hover {
+  scale: 1.2;
+}
+.card p {
+  margin-bottom: 20px;
+}
+.card .special {
+  width: 30%;
+  margin-bottom: 10px;
+}
+.card button {
+  padding: 10px 0px;
+  width: 100%;
+  background-color: hsl(231, 69%, 60%);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 5px;
+  transition: all ease 0.33s;
+}
+.card button:hover {
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+  border: 1px solid hsl(231, 69%, 60%);
+}
+.card1 {
+  align-self: flex-start;
+}
+.card3 {
+  align-self: flex-end;
+}
+.questions {
+  padding: 0px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.questions .top {
+  margin-bottom: 50px;
+}
+.questions .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 700px;
+}
+.questions .bottom details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  /* border: 1px solid hsl(231, 69%, 60%); */
+  box-shadow: 0px 1px 2px 0px hsl(231, 54%, 75%);
+  cursor: pointer;
+}
+.questions .bottom summary {
+  color: hsl(229, 31%, 21%);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+.questions .bottom p {
+  color: hsl(229, 14%, 46%);
+  margin-left: 20px;
+}
+.questions .bottom button {
+  padding: 10px 15px;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  border: 1px solid transparent;
+  transition: all ease 0.33s;
+  border-radius: 5px;
+}
+.questions .bottom button:hover {
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+  border: 1px solid hsl(231, 69%, 60%);
+}
+.contact {
+  min-height: 350px;
+  background-color: hsl(231, 69%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  color: #ffff;
+}
+.contact h3 span {
+  color: hsl(0, 94%, 66%);
+  font-size: 2rem;
+}
+.contact input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.contact input::placeholder {
+  opacity: 50%;
+}
+.contact input:focus {
+  outline: 1px solid hsl(231, 69%, 60%);
+}
+.contact button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  transition: all ease 0.33s;
+}
+.contact button:hover {
+  background-color: white;
+  color: hsl(0, 94%, 66%);
+  border: 1px solid hsl(0, 94%, 66%);
+}
+.contact button:active {
+  border: 1px solid transparent;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  transition: none;
+}
+footer {
+  padding: 0px 10%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: hsl(229, 31%, 21%);
+  color: #ffff;
+  min-height: 70px;
+  flex-wrap: wrap;
+}
+footer .logo img {
+  color: #ffff;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+footer .socials {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+footer ul li:hover {
+  cursor: pointer;
+  color: hsl(0, 94%, 66%);
 }
