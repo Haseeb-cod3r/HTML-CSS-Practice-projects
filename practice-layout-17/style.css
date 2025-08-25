@@ -27,6 +27,9 @@ nav .links ul {
   gap: 20px;
   color: hsl(229, 36%, 59%);
 }
+nav .links .menu {
+  display: none;
+}
 nav .links ul li {
   padding: 5px 20px;
   display: flex;
@@ -76,7 +79,7 @@ nav .links ul .active {
 }
 .right h1 {
   color: hsl(229, 31%, 21%);
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 500;
 }
 .right h1 span {
@@ -118,18 +121,21 @@ nav .links ul .active {
 }
 .left img {
   position: relative;
+  z-index: 1;
   width: 100%;
 }
-.left .bg {
+.left .bg::before {
+  content: "";
   position: absolute;
-  height: 350px;
-  width: 130%;
-  background-color: hsl(231, 69%, 60%);
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  bottom: -15px;
-  right: -450px;
-  pointer-events: none;
+  width: 100%;
+  height: 70%;
+  background: hsl(231, 69%, 60%);
+  top: 50%;
+  left: 0;
+
+  transform: translate(30%, -20%);
+  border-radius: 200px 0px 0px 200px;
+  z-index: 0;
 }
 .features {
   padding: 0px 10%;
@@ -152,10 +158,8 @@ nav .links ul .active {
 .features .options {
   padding: 0px 0px 10px 0px;
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   column-gap: 100px;
-  /* row-gap: 30px; */
   box-shadow: 0px 1px 2px 0px rgb(156, 156, 156);
   cursor: pointer;
 }
@@ -170,7 +174,10 @@ nav .links ul .active {
   content: "";
   position: absolute;
   bottom: -12px;
+  left: 0px;
+  right: 0px;
   height: 3px;
+  margin: auto;
   width: 0px;
   background-color: hsl(0, 94%, 66%);
   border-radius: 3px;
@@ -183,6 +190,7 @@ nav .links ul .active {
   content: "";
   position: absolute;
   bottom: -12px;
+
   height: 3px;
   width: 100%;
   background-color: hsl(0, 94%, 66%);
@@ -229,20 +237,24 @@ nav .links ul .active {
 }
 .bookMark .right {
   position: relative;
+  align-self: center;
 }
 .bookMark .right img {
   position: relative;
+  z-index: 1;
   width: 100%;
 }
-.bookMark .right .bg2 {
+.bookMark .right .bg2::before {
+  content: "";
   position: absolute;
-  height: 350px;
   width: 100%;
-  background-color: hsl(231, 69%, 60%);
-  border-bottom-right-radius: 50%;
-  border-top-right-radius: 50%;
-  bottom: -80px;
-  left: -325px;
+  height: 70%;
+  background: hsl(231, 69%, 60%);
+  top: 50%;
+  left: 0;
+  transform: translate(-30%, -5%);
+  border-radius: 0px 200px 200px 0px;
+  z-index: 0;
 }
 .extensions {
   padding: 0px 10%;
@@ -266,12 +278,15 @@ nav .links ul .active {
 }
 .extensions .bottom {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 30px;
-  height: 400px;
+  min-height: 400px;
 }
 .card {
+  flex: 1 1 300px;
+  max-width: 300px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -279,7 +294,6 @@ nav .links ul .active {
   gap: 10px;
   box-shadow: 1px 1px 5px 0px rgb(189, 185, 185);
   border-radius: 20px;
-  max-width: 300px;
   transition: all ease 0.33s;
 }
 .card:hover {
@@ -327,7 +341,7 @@ nav .links ul .active {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  width: 700px;
+  width: 70%;
 }
 .questions .bottom details {
   display: flex;
@@ -335,7 +349,6 @@ nav .links ul .active {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  /* border: 1px solid hsl(231, 69%, 60%); */
   box-shadow: 0px 1px 2px 0px hsl(231, 54%, 75%);
   cursor: pointer;
 }
@@ -433,4 +446,80 @@ footer .socials {
 footer ul li:hover {
   cursor: pointer;
   color: hsl(0, 94%, 66%);
+}
+
+@media (max-width: 700px) {
+  nav .links .menu {
+    display: block;
+  }
+  nav .links ul {
+    display: none;
+  }
+  .heroSec {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .heroSec .right {
+    align-items: center;
+  }
+  .features {
+    margin-bottom: 100px;
+  }
+  .features .options {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  .features .options h2 {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(133, 133, 133);
+  }
+  .features .options .sharing {
+    margin-right: 0px;
+  }
+  .features .options h2::before {
+    bottom: -1px;
+    width: 0%;
+    margin: auto;
+  }
+  .features .options h2:hover::before {
+    width: 50%;
+  }
+  .features .options .simple::before {
+    width: 0%;
+    bottom: -1px;
+  }
+  .bookMark {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bookMark .right {
+    margin-bottom: 50px;
+  }
+  .contact input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contact button {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo {
+    margin-top: 20px;
+    margin-left: 110px;
+  }
+  footer ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .socials {
+    margin-left: 0px;
+  }
 }
